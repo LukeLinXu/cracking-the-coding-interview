@@ -5,6 +5,7 @@ public class Code_1_1 {
 
     public static void main(String[] args){
         System.out.println(isUniqueChars2("nima"));
+        System.out.println(isUniqueChars("nima"));
     }
 
     public static boolean isUniqueChars2(String str){
@@ -16,6 +17,16 @@ public class Code_1_1 {
                 return false;
             }
             char_set[val] = true;
+        }
+        return true;
+    }
+
+    public static boolean isUniqueChars(String str){
+        int checker = 0;
+        for (int i = 0 ; i < str.length(); i++){
+            int temp = str.charAt(i);
+            if ((checker & 1 << temp) > 0) return false;
+            checker |= 1 << temp;
         }
         return true;
     }

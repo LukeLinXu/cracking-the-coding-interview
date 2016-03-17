@@ -26,4 +26,40 @@ public class Code_2_1 {
         }
     }
 
+    public static void deleteDupsNoBuffer(LinkedListNode n){
+        if (n == null) return;
+        while(n != null){
+            LinkedListNode runner = n;
+            while (runner.next != null){
+                if(runner.next.data == n.data){
+                    runner.next = runner.next.next;
+                }else {
+                    runner = runner.next;
+                }
+            }
+            n = n.next;
+        }
+
+//        if (n == null) return;
+//        LinkedListNode runner = n;
+//        while(true) {
+//            while (true) {
+//                if (n.data == runner.next.data) {
+//                    runner.next = runner.next.next;
+//                    //remove this node
+//                    break;
+//                } else {
+//                    if (runner.next == null) {
+//                        n = n.next;
+//                        runner = n;
+//                        break;
+//                    } else {
+//                        runner = runner.next;
+//                    }
+//                }
+//            }
+//            if(n.next == null) break;
+//        }
+    }
+
 }

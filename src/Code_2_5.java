@@ -6,7 +6,7 @@ import pojo.LinkedListNode;
 public class Code_2_5 {
 
     public static void main(String[] args){
-
+        //todo: follow up
     }
 
     LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2, int carry) {
@@ -26,5 +26,7 @@ public class Code_2_5 {
         }
         return result;
     }
+
+
 
 }
